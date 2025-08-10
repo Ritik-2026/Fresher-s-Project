@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Calculator Suite</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Basic Calculator</a>
+                <a href="scientific.html" class="nav-link active">Scientific</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Converters ▼</a>
+                    <div class="dropdown-content">
+                        <a href="length.html">Length</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="time.html">Time</a>
+                        <a href="speed.html">Speed</a>
+                        <a href="temperature.html">Temperature</a>
+                        <a href="bmi.html">BMI</a>
+                        <a href="currency.html">Currency</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="area.html">Area</a>
+                        <a href="data.html">Data</a>
+                        <a href="number.html">Number System</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="calculator-container">
+            <h2>Scientific Calculator</h2>
+            <div class="scientific-calculator">
+                <div class="display">
+                    <input type="text" id="sciDisplay" readonly>
+                </div>
+                <div class="sci-buttons">
+                    <!-- Row 1 -->
+                    <button class="btn clear" onclick="clearSciDisplay()">C</button>
+                    <button class="btn clear" onclick="clearSciEntry()">CE</button>
+                    <button class="btn operation" onclick="deleteSciLast()">⌫</button>
+                    <button class="btn operation" onclick="appendToSciDisplay('/')">/</button>
+                    <button class="btn scientific" onclick="calculateFunction('sqrt')">√</button>
+                    
+                    <!-- Row 2 -->
+                    <button class="btn scientific" onclick="calculateFunction('sin')">sin</button>
+                    <button class="btn scientific" onclick="calculateFunction('cos')">cos</button>
+                    <button class="btn scientific" onclick="calculateFunction('tan')">tan</button>
+                    <button class="btn operation" onclick="appendToSciDisplay('*')">×</button>
+                    <button class="btn scientific" onclick="calculateFunction('power', 2)">x²</button>
+                    
+                    <!-- Row 3 -->
+                    <button class="btn scientific" onclick="calculateFunction('ln')">ln</button>
+                    <button class="btn scientific" onclick="calculateFunction('log')">log</button>
+                    <button class="btn scientific" onclick="appendToSciDisplay('Math.PI')">π</button>
+                    <button class="btn operation" onclick="appendToSciDisplay('-')">-</button>
+                    <button class="btn scientific" onclick="calculateFunction('power', 3)">x³</button>
+                    
+                    <!-- Row 4 -->
+                    <button class="btn number" onclick="appendToSciDisplay('7')">7</button>
+                    <button class="btn number" onclick="appendToSciDisplay('8')">8</button>
+                    <button class="btn number" onclick="appendToSciDisplay('9')">9</button>
+                    <button class="btn operation" onclick="appendToSciDisplay('+')">+</button>
+                    <button class="btn scientific" onclick="calculateFunction('exp')">eˣ</button>
+                    
+                    <!-- Row 5 -->
+                    <button class="btn number" onclick="appendToSciDisplay('4')">4</button>
+                    <button class="btn number" onclick="appendToSciDisplay('5')">5</button>
+                    <button class="btn number" onclick="appendToSciDisplay('6')">6</button>
+                    <button class="btn operation" onclick="appendToSciDisplay('(')">(</button>
+                    <button class="btn operation" onclick="appendToSciDisplay(')')">)</button>
+                    
+                    <!-- Row 6 -->
+                    <button class="btn number" onclick="appendToSciDisplay('1')">1</button>
+                    <button class="btn number" onclick="appendToSciDisplay('2')">2</button>
+                    <button class="btn number" onclick="appendToSciDisplay('3')">3</button>
+                    <button class="btn scientific" onclick="calculateFunction('factorial')">n!</button>
+                    <button class="btn scientific" onclick="appendToSciDisplay('Math.E')">e</button>
+                    
+                    <!-- Row 7 -->
+                    <button class="btn number" onclick="appendToSciDisplay('0')">0</button>
+                    <button class="btn number" onclick="appendToSciDisplay('.')">.</button>
+                    <button class="btn operation" onclick="calculateSciPercentage()">%</button>
+                    <button class="btn equals" onclick="calculateSci()" style="grid-column: span 2">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scientific.js"></script>
+</body>
+</html>

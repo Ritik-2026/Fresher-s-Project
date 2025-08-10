@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Calculator Suite</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Basic Calculator</a>
+                <a href="scientific.html" class="nav-link">Scientific</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link active">Converters ▼</a>
+                    <div class="dropdown-content">
+                        <a href="length.html">Length</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="time.html">Time</a>
+                        <a href="speed.html">Speed</a>
+                        <a href="temperature.html">Temperature</a>
+                        <a href="bmi.html">BMI</a>
+                        <a href="currency.html">Currency</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="area.html">Area</a>
+                        <a href="data.html">Data</a>
+                        <a href="number.html">Number System</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="converter-container">
+            <h2>Mass Converter</h2>
+            <div class="converter-form">
+                <div class="input-group">
+                    <label for="massValue">Enter Value:</label>
+                    <input type="number" id="massValue" placeholder="Enter mass value" step="any">
+                </div>
+                
+                <div class="input-group">
+                    <label for="fromMass">From:</label>
+                    <select id="fromMass">
+                        <option value="mg">Milligram (mg)</option>
+                        <option value="g">Gram (g)</option>
+                        <option value="kg" selected>Kilogram (kg)</option>
+                        <option value="oz">Ounce (oz)</option>
+                        <option value="lb">Pound (lb)</option>
+                        <option value="ton">Metric Ton</option>
+                        <option value="stone">Stone</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="toMass">To:</label>
+                    <select id="toMass">
+                        <option value="mg">Milligram (mg)</option>
+                        <option value="g" selected>Gram (g)</option>
+                        <option value="kg">Kilogram (kg)</option>
+                        <option value="oz">Ounce (oz)</option>
+                        <option value="lb">Pound (lb)</option>
+                        <option value="ton">Metric Ton</option>
+                        <option value="stone">Stone</option>
+                    </select>
+                </div>
+                
+                <button class="convert-btn" onclick="convertMass()">Convert</button>
+                
+                <div class="result" id="massResult">Result will appear here</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="converters.js"></script>
+</body>
+</html>
